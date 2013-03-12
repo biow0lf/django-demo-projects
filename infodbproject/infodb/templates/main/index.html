@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    {% if persons %}
+      <table border="1px black dotted">
+        <thead>
+          <tr>
+            <th>First name:</th>
+            <th>Middle name:</th>
+            <th>Last name:</th>
+            <th>Bio:</th>
+            <th>Contacts:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in persons %}
+            <tr>
+              <td>{{ person.firstname }}</td>
+              <td>{{ person.middlename }}</td>
+              <td>{{ person.lastname }}</td>
+              <td>{{ person.info }}</td>
+              <td>{{ person.contacts }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>Zeropeople</p>
+    {% endif %}
+  </body>
+</html>
