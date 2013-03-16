@@ -18,8 +18,8 @@
             <tr>
               <td>{{ person.name }}</td>
               <td>{{ person.surname }}</td>
-              <td>{{ person.bio }}</td>
-              <td>{{ person.contacts }}</td>
+              <td>{{ person.bio|linebreaksbr }}</td>
+              <td>{{ person.contacts|linebreaksbr }}</td>
             </tr>
           {% endfor %}
         </tbody>
