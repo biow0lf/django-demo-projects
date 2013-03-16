@@ -7,9 +7,8 @@
       <table border="1px black dotted">
         <thead>
           <tr>
-            <th>First name:</th>
-            <th>Middle name:</th>
-            <th>Last name:</th>
+            <th>Name:</th>
+            <th>Surname:</th>
             <th>Bio:</th>
             <th>Contacts:</th>
           </tr>
@@ -17,10 +16,9 @@
         <tbody>
           {% for person in persons %}
             <tr>
-              <td>{{ person.firstname }}</td>
-              <td>{{ person.middlename }}</td>
-              <td>{{ person.lastname }}</td>
-              <td>{{ person.info }}</td>
+              <td>{{ person.name }}</td>
+              <td>{{ person.surname }}</td>
+              <td>{{ person.bio }}</td>
               <td>{{ person.contacts }}</td>
             </tr>
           {% endfor %}

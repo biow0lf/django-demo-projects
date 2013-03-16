@@ -22,17 +22,17 @@
 - fields: {app_label: infodb, model: person, name: person}
   model: contenttypes.contenttype
   pk: 8
-- fields: {expire_date: !!timestamp '2013-03-27 02:48:31.348399+00:00', session_data: ZTg4ZjU0MTZjOThhYmQ3OTAxMTc0NTliOTE1YTNhYjEyODY2YTdmYjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu}
+- fields: {expire_date: !!timestamp '2013-03-30 01:57:57.742536+00:00', session_data: ZTg4ZjU0MTZjOThhYmQ3OTAxMTc0NTliOTE1YTNhYjEyODY2YTdmYjqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu}
   model: sessions.session
-  pk: yoo14tz72d4nkvhttys2dcwhxjlyzl7r
+  pk: n14w45whjjmdk31iezvka0v32k82vc7j
 - fields: {domain: example.com, name: example.com}
   model: sites.site
   pk: 1
-- fields: {contacts: "\u041C\u043E\u0438 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\
-      \u044B", firstname: "\u0418\u0433\u043E\u0440\u044C", info: "\u0411\u0438\u043E\
-      \u0433\u0440\u0430\u0444\u0438\u044F \u0432 \u043E\u0434\u043D\u043E\u0439 \u0441\
-      \u0442\u0440\u043E\u043A\u0435", lastname: "\u0417\u0443\u0431\u043A\u043E\u0432",
-    middlename: "\u041C\u0438\u0445\u0430\u0439\u043B\u043E\u0432\u0438\u0447"}
+- fields: {bio: "\u0411\u0438\u043E\u0433\u0440\u0430\u0444\u0438\u044F \u043E\u0434\
+      \u043D\u043E\u0439 \u0441\u0442\u0440\u043E\u043A\u043E\u0439.", contacts: "Email:\
+      \ igor.zubkov@gmail.com\r\nJabber: igor.zubkov@gmail.com\r\nSkype: IgorZubkov.work\r\
+      \nCell: +38(063)743-44-09\r\n ", name: "\u0418\u0433\u043E\u0440\u044C", surname: "\u0417\u0443\
+      \u0431\u043A\u043E\u0432"}
   model: infodb.person
   pk: 1
 - fields: {codename: add_permission, content_type: 1, name: Can add permission}
@@ -110,21 +110,21 @@
   model: auth.permission
   pk: 24
 - fields:
-    date_joined: 2013-03-13 02:47:38.053387+00:00
+    date_joined: 2013-03-16 01:57:36.457712+00:00
     email: job@d-cod.com
     first_name: ''
     groups: []
     is_active: true
     is_staff: true
     is_superuser: true
-    last_login: 2013-03-13 02:48:30.902803+00:00
+    last_login: 2013-03-16 01:57:57.587172+00:00
     last_name: ''
-    password: pbkdf2_sha256$10000$O9FAhrDyClPs$iugu71xdSKIbvTPwMVpsChrM2tbkP6OCb0wxBXCaaHI=
+    password: pbkdf2_sha256$10000$jYLYfsYlIr3f$r2jTApqaQpFYIPzLWnNbu97TCecQ3f0G4ypIXSXY4ng=
     user_permissions: []
     username: admin
   model: auth.user
   pk: 1
-- fields: {action_flag: 1, action_time: !!timestamp '2013-03-13 02:48:57.602337+00:00',
+- fields: {action_flag: 1, action_time: !!timestamp '2013-03-16 01:59:17.146945+00:00',
     change_message: '', content_type: 8, object_id: '1', object_repr: Person object,
     user: 1}
   model: admin.logentry

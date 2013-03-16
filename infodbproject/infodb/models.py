@@ -1,10 +1,9 @@
 from django.db import models
 
 class Person(models.Model):
-    firstname = models.CharField(max_length=255)
-    middlename = models.CharField(max_length=255)
-    lastname = models.CharField(max_length=255)
-    info = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    surname = models.CharField(max_length=255)
+    bio = models.TextField()
     contacts = models.TextField()
 
     class Meta:
