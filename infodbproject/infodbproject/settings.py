@@ -169,7 +169,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
-    'infodb.processor.add_settings',
+    'infodb.context_processors.add_settings',
 )
 
 LOGIN_URL = '/login'
