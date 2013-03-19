@@ -2,6 +2,16 @@
 
 {% block head %}
   <title>Edit</title>
+  <link rel="stylesheet" href="/static/themes/base/jquery.ui.all.css">
+  <script src="/static/jquery-1.9.1.js"></script>
+  <script src="/static/ui/jquery.ui.core.js"></script>
+  <script src="/static/ui/jquery.ui.widget.js"></script>
+  <script src="/static/ui/jquery.ui.datepicker.js"></script>
+  <script>
+    $(function() {
+        $("#id_dob").datepicker({ dateFormat: "dd.mm.yy" });
+    });
+  </script>
 {% endblock %}
 
 {% block body %}
