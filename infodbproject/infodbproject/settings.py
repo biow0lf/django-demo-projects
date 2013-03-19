@@ -168,3 +168,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'infodb.processor.add_settings',
 )
+
+LOGIN_URL = '/login'
+
+LOGOUT_URL = '/logout'

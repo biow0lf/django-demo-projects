@@ -1,37 +1,53 @@
-<html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    {% if persons %}
-      <table border="1px black dotted">
-        <thead>
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Main</title>
+{% endblock %}
+
+{% block body %}
+
+  {% if user.is_authenticated %}
+    <h1>Welcome, {{ user.username }}. <a href="{{ settings.LOGOUT_URL }}">Logout</a></h1>
+  {% else %}
+    <h1><a href="{{ settings.LOGIN_URL }}">Sign in</a> or <a href="">Sign up</a></h1>
+  {% endif %}
+
+  {% if persons %}
+    <table border="1px black dotted">
+      <thead>
+        <tr>
+          <th>Name:</th>
+          <th>Surname:</th>
+          <th>Bio:</th>
+          <th>Contacts:</th>
+          {% if user.is_authenticated %}
+            <th>&nbsp;</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for person in persons %}
           <tr>
-            <th>Name:</th>
-            <th>Surname:</th>
-            <th>Bio:</th>
-            <th>Contacts:</th>
+            <td>{{ person.name }}</td>
+            <td>{{ person.surname }}</td>
+            <td>{{ person.bio|linebreaksbr }}</td>
+            <td>{{ person.contacts|linebreaksbr }}</td>
+            {% if user.is_authenticated %}
+              <td><a href="/edit/{{ person.id }}">Edit</a></td>
+            {% endif %}
           </tr>
-        </thead>
-        <tbody>
-          {% for person in persons %}
-            <tr>
-              <td>{{ person.name }}</td>
-              <td>{{ person.surname }}</td>
-              <td>{{ person.bio|linebreaksbr }}</td>
-              <td>{{ person.contacts|linebreaksbr }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    {% else %}
-      <p>Zeropeople</p>
-    {% endif %}
-    <!--
-    {% if settings %}
-      <h1>{{ settings.TIME_ZONE }}</h1>
-      <h1>{{ settings.DEBUG }}</h1>
-    {% endif %}
-    -->
-  </body>
-</html>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>Zeropeople</p>
+  {% endif %}
+
+  <!--
+  {% if settings %}
+    <h1>{{ settings.TIME_ZONE }}</h1>
+    <h1>{{ settings.DEBUG }}</h1>
+  {% endif %}
+  -->
+
+{% endblock %}
