@@ -14,9 +14,11 @@ def main(request):
     return render_to_response('main/index.html', {'persons': persons},
         context_instance=RequestContext(request))
 
+
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
+
 
 @login_required
 def edit(request, person_id):
@@ -30,4 +32,3 @@ def edit(request, person_id):
                                   {'form': form,
                                    'person_id': person_id},
                 context_instance=RequestContext(request))
-
